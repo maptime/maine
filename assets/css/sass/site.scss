@@ -1,1 +1,70 @@
 @import '../../components/bower-bourbon/bourbon';
+
+// variables
+// fonts
+$font-main: "freight-sans-pro";
+$font-heading: "din-condensed-web";
+// colors
+$color-main: #444;
+$color-brand: rgb(74, 126, 218);
+$color-brand-light: lighten($color-brand, 20%);
+
+* { @include box-sizing(border-box); }
+
+body {
+	color: $color-main;
+	line-height: 1.6;
+	font-family: $font-main;
+}
+
+.container { 
+	position: relative;
+	background: rgba(255,255,255,0.9);
+	padding: 1em;
+	z-index: 100000;
+	top: 2em;
+}
+
+@media screen and (min-width: 400px) {
+	.container {
+		margin: 0 auto;
+		max-width: 25em;
+		top: 10em;
+	}
+}
+
+h1,
+h2 {
+	font-family: $font-heading;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: $color-brand;
+	@include transition(ease-in 0.25s);
+	&:hover {
+		color: $color-brand-light;
+		@include transition(ease-in 0.25s);
+	}
+}
+
+li { list-style-type: circle; }
+
+header {
+	h1,
+	p {
+		margin: 0;
+		line-height: 1;
+	}
+	p { font-size: 80%; }
+}
+
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}

@@ -11,9 +11,47 @@
 		<!-- STYLESHEETS -->
 		<link rel='stylesheet' href='assets/components/normalize-css/normalize.css' />
 		<link rel='stylesheet' href='assets/css/site.css' />
+
+		<!-- MAPBOX -->
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
 	</head>
 
 	<body>
-		<h1>MAPTIME.ME</h1>
+
+		<div class='container center'>
+
+			<header>
+				<h1>
+					<a href='/'>Maptime.ME</a>
+				</h1>
+				<p>Our next meetup is scheduled for ...</p>
+			</header>
+
+			<div class='content'>
+
+				<p>Maptime.ME is a monthly map hack night, alternating between Portland and Bangor.</p>
+				<p>We tell stories with maps, investigate interesting geospatial datasets, and learn about the latest cartographic tools.</p>
+				<p>If you'd like to keep up to date on upcoming events, join our <a href='http://www.meetup.com/MaptimeME'>Meetup Group</a>. Alternatively, we have a twitter account over at <a href='http://twitter.com/maptimeme'>@MaptimeME</a>. We look forward to hearing from you!</p>
+				<p>Pull requests are welcome; our Github repository lives over at <a href='https://github.com/jacquestardie/maptime'>jacquestardie/maptime</a>.</p>
+				<p>If you have any questions/comments, send an email to <a href='mailto:hi@jacquestardie.org'>Jacques</a>.</p>
+			</div>
+
+		</div>
+		<div id='map'></div>
+
+		<!-- JAVASCRIPTS -->
+		<script type="text/javascript" src="//use.typekit.net/sao2pvi.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<script>
+			var map = L.mapbox.map('map', 'jacques.he36ba9d', { 
+				zoomControl: false,
+				retine: true
+			});
+
+			map.setView([43.6598, -70.2712], 14);
+		</script>
 	</body>
 </html>
