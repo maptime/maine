@@ -3,25 +3,22 @@
 	<head>
 		<meta charset='utf-8'>
 		<title>Maptime.me</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-		<meta name="author" content="Jacques Tardie <hi@jacquestardie.org>">
-		<!-- <meta name="keywords" content="" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- STYLESHEETS -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
+		<meta name='author' content='Jacques Tardie <hi@jacquestardie.org>'>
+		<meta name='keywords' content='geo, cartography, maine, osm, openstreetmap, leaflet, mapbox' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<!-- Stylesheets -->
 		<link rel='stylesheet' href='assets/components/normalize-css/normalize.css' />
 		<link rel='stylesheet' href='assets/css/site.css' />
-
-		<!-- MAPBOX -->
+		<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' />
+		<!-- Scripts -->
+		<!-- Most of the scripts are loaded at the end of the doc. -->
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-		<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
-
 	</head>
 
 	<body>
 
 		<div class='container center'>
-
 			<header>
 				<h1>
 					<a href='/'>Maptime.ME</a>
@@ -30,28 +27,19 @@
 			</header>
 
 			<div class='content'>
-
 				<p>Maptime.ME is a monthly map hack night, alternating between Portland and Bangor.</p>
 				<p>We tell stories with maps, investigate interesting geospatial datasets, and learn about the latest cartographic tools.</p>
 				<p>If you'd like to keep up to date on upcoming events, join our <a href='http://www.meetup.com/MaptimeME'>Meetup Group</a>. Alternatively, we have a twitter account over at <a href='http://twitter.com/maptimeme'>@MaptimeME</a>. We look forward to hearing from you!</p>
 				<p>Pull requests are welcome; our Github repository lives over at <a href='https://github.com/jacquestardie/maptime'>jacquestardie/maptime</a>.</p>
 				<p>If you have any questions/comments, send an email to <a href='mailto:hi@jacquestardie.org'>Jacques</a>.</p>
 			</div>
-
 		</div>
 		<div id='map'></div>
 
-		<!-- JAVASCRIPTS -->
-		<script type="text/javascript" src="//use.typekit.net/sao2pvi.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-		<script>
-			var map = L.mapbox.map('map', 'jacques.he36ba9d', { 
-				zoomControl: false,
-				retine: true
-			});
-
-			map.setView([43.6598, -70.2712], 14);
-		</script>
+		<!-- Scripts -->
+		<script type='text/javascript' src='//use.typekit.net/sao2pvi.js'></script>
+		<script type='text/javascript' src='assets/js/typekit.js'></script>
+		<script type='text/javascript' src='assets/js/basemap.js'></script>
+		<script type='text/javascript' src='assets/js/analytics.js'></script>
 	</body>
 </html>
