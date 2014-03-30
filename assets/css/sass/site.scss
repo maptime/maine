@@ -15,28 +15,36 @@ body {
 	color: $color-main;
 	line-height: 1.6;
 	font-family: $font-main;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
-.container { 
-	position: relative;
+.content { 
+	border-radius: 3px;
+	text-align: center;
 	background: rgba(255,255,255,0.9);
 	padding: 1em;
+	max-width: 25em;
 	z-index: 100000;
-	top: 2em;
 }
 
-@media screen and (min-width: 400px) {
-	.container {
-		margin: 0 auto;
-		max-width: 25em;
-		top: 10em;
-	}
-}
-
-h1,
-h2 {
+h1 {
 	font-family: $font-heading;
 	text-transform: uppercase;
+	margin: 0;
 }
 
 a {
@@ -50,17 +58,16 @@ a {
 	}
 }
 
-li { list-style-type: circle; }
-
-header {
-	h1,
-	p {
-		margin: 0;
-		line-height: 1;
-	}
-	p { font-size: 80%; }
+ul { 
+	padding: 0;
+	margin: 0;
+	text-align: center;
 }
 
+li {
+	display: inline;
+	margin: 0 10px;
+}
 
 #map {
 	position: absolute;
