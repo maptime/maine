@@ -1,77 +1,83 @@
-@import '../../components/bower-bourbon/bourbon';
+// IMPORTS & VARIABLES
 
-// variables
-// fonts
-$font-main: "freight-sans-pro";
-$font-heading: "din-condensed-web";
-// colors
-$color-main: #444;
-$color-brand: rgb(74, 126, 218);
-$color-brand-light: lighten($color-brand, 20%);
+		@import '../../components/bower-bourbon/bourbon';
 
-* { @include box-sizing(border-box); }
+		$font-main: "freight-sans-pro";
+		$font-heading: "din-condensed-web";
+		$color-main: #222;
+		$color-brand: rgb(74, 126, 218);
+		$color-brand-light: lighten($color-brand, 20%);
 
-body {
-	color: $color-main;
-	line-height: 1.6;
-	font-family: $font-main;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-.container {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
 
-.content { 
-	border-radius: 3px;
-	text-align: center;
-	background: rgba(255,255,255,0.9);
-	padding: 1em;
-	max-width: 25em;
-	z-index: 100000;
-}
+// LAYOUT
+		
+		* { @include box-sizing(border-box); }
 
-h1 {
-	font-family: $font-heading;
-	text-transform: uppercase;
-	margin: 0;
-}
+		body {
+			color: $color-main;
+			line-height: 1.6;
+			font-family: $font-main;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
 
-a {
-	text-decoration: none;
-	font-weight: bold;
-	color: $color-brand;
-	@include transition(ease-in 0.25s);
-	&:hover {
-		color: $color-brand-light;
-		@include transition(ease-in 0.25s);
-	}
-}
+		.container {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
 
-ul { 
-	padding: 0;
-	margin: 0;
-	text-align: center;
-}
+		.content { 
+			text-align: center;
+			background: rgba(255,255,255,0.9);
+			padding: 1em;
+			max-width: 25em;
+			z-index: 100000;
+		}
 
-li {
-	display: inline;
-	margin: 0 10px;
-}
+		#map {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		}
 
-#map {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-}
+
+// TYPOGRAPHY
+
+		h1 {
+			font-family: $font-heading;
+			text-transform: uppercase;
+			margin: 0;
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			color: $color-brand;
+			@include transition(ease-in 0.25s);
+			&:hover {
+				color: $color-brand-light;
+				@include transition(ease-in 0.25s);
+			}
+		}
+
+		ul { 
+			padding: 0;
+			margin: 0;
+			text-align: center;
+		}
+
+		li {
+			display: inline;
+			margin: 0 10px;
+		}
+

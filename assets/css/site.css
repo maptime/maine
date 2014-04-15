@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  color: #444444;
+  color: #222222;
   line-height: 1.6;
   font-family: "freight-sans-pro";
   position: absolute;
@@ -24,12 +24,17 @@ body {
   height: 100%; }
 
 .content {
-  border-radius: 3px;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   padding: 1em;
   max-width: 25em;
   z-index: 100000; }
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
 
 h1 {
   font-family: "din-condensed-web";
@@ -57,9 +62,3 @@ ul {
 li {
   display: inline;
   margin: 0 10px; }
-
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%; }
