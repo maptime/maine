@@ -4,10 +4,10 @@
 
 		$font-main: "freight-sans-pro";
 		$font-heading: "din-condensed-web";
-		$color-main: #222;
-		$color-brand: rgb(74, 126, 218);
-		$color-brand-light: lighten($color-brand, 20%);
 
+		$color-main: #222;
+		$color-brand: #444;
+		$color-brand-light: lighten($color-brand, 20%);
 
 // LAYOUT
 		
@@ -36,7 +36,6 @@
 		}
 
 		.content { 
-			text-align: center;
 			background: rgba(255,255,255,0.9);
 			padding: 1em;
 			max-width: 25em;
@@ -73,7 +72,6 @@
 		ul { 
 			padding: 0;
 			margin: 0;
-			text-align: center;
 		}
 
 		li {
